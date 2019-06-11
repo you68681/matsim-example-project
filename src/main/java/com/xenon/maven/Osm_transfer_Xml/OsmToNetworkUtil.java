@@ -30,7 +30,7 @@ public class OsmToNetworkUtil {
 		Scenario scenario = ScenarioUtils.loadScenario(config);
 		CoordinateTransformation trans = new WGS84toMercator();
 		OsmNetworkReader osmReader = new OsmNetworkReader(scenario.getNetwork(), trans);
-		String dir = "./Map/";			// put the input .osm map in this path
+		String dir = "./original-input-data/Map/";			// put the input .osm map in this path
 		String osmFile = "melbourne.osm";				// input .osm map
 		String networkFile = "melbourne.xml";		// output .xml network
 		try{

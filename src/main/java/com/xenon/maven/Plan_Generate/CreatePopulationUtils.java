@@ -62,14 +62,14 @@ public class CreatePopulationUtils {
 		String filePath = in.nextLine();
 */		
 		// input network.xml path
-		new MatsimNetworkReader(scenario.getNetwork()).readFile("./Map/melbourne.xml");
+		new MatsimNetworkReader(scenario.getNetwork()).readFile("./original-input-data/Map/melbourne.xml");
 		
 //		new MatsimNetworkReader(scenario.getNetwork()).readFile(dir);
 		setMaxMinCoord(scenario.getNetwork());
 		fillScenario(scenario);
 		
 		// plans.xml output file path 
-		String filePath = "./MyPlan/test.xml";
+		String filePath = "./original-input-data/Plans/test.xml";
 		new PopulationWriter(scenario.getPopulation()).write(filePath);
 		System.out.println("Done writing file to"+filePath);
 	}

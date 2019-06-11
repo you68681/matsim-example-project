@@ -1,5 +1,5 @@
-Suggestion to put original input data into this directory.  
+# original-input-data
 
-Suggestion to put input data for MATSim runs into the `scenario` directory.
 
-Suggestion to put results as subdirectories into the corresponding `scenario` directory.
+* `Map` input .osm network and output .xml network
+* `Plans` output plans.xml based on input .xml network from  Map
