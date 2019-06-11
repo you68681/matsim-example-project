@@ -24,6 +24,14 @@ Sometimes, step 3 does not work, in particular after previously failed attempts.
 right-click to `configure->convert to maven project`.  If that fails, the best thing seems to remove all 
 pieces of the failed attempt in the directory and start over.
 
-### Import into IntelliJ
+### Java program
 
-... todo ...
+* /src/main/java/com/xenon/maven/
+  * `Osm_transfer_Xml`: transfer the .osm network to .xml network.
+  * `Plan_Generate`: genertate plans.xml base on network.xml.
+* /src/main/java/org/matsim/
+  * `gui`: start MATSim GUI.
+  * `project`: one simple MATSim example.
+
+
+
