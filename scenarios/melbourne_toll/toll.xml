@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE roadpricing SYSTEM "http://www.matsim.org/files/dtd/roadpricing_v1.dtd">
+
+<roadpricing type="link" name="abc">
+        <links>
+                <link id="97" >
+        			<cost start_time="07:00" end_time="09:00" amount="10." />
+        			<cost start_time="17:00" end_time="19:00" amount="10." />
+                </link>             
+                <link id="182" >
+        			<cost start_time="07:00" end_time="09:00" amount="10." />
+        			<cost start_time="17:00" end_time="19:00" amount="10." />
+                </link>             
+                <link id="95">
+        			<cost start_time="07:00" end_time="09:00" amount="10." />
+        			<cost start_time="17:00" end_time="19:00" amount="10." />
+                </link>             
+                <link id="180">
+        			<cost start_time="07:00" end_time="09:00" amount="10.0" />
+        			<cost start_time="17:00" end_time="19:00" amount="10.0" />
+                </link>                         
+	</links>
+
+	<!--this is for all links that do not have a cost entry above (here none):-->
+	<cost start_time="05:00" end_time="10:00" amount="0.00"/>
+
+</roadpricing>

@@ -69,7 +69,7 @@ public class CreatePopulationUtils {
 		fillScenario(scenario);
 		
 		// plans.xml output file path 
-		String filePath = "./original-input-data/Plans/test.xml";
+		String filePath = "./original-input-data/Plans/new_melbourne_500.xml";
 		new PopulationWriter(scenario.getPopulation()).write(filePath);
 		System.out.println("Done writing file to"+filePath);
 	}
@@ -94,25 +94,53 @@ public class CreatePopulationUtils {
 		
 		Plan plan = population.getFactory().createPlan();
 		
+		
+		
 		Activity home = population.getFactory().createActivityFromCoord("home", coord);
 		home.setEndTime(randomTime(8*60*60, 60*60));
+		
 		plan.addActivity(home);
 		
-		Leg hinweg = population.getFactory().createLeg("car");
-		plan.addLeg(hinweg);
+		Boolean flag=rand();
+		System.out.println(flag);
+		if (flag) {
+			Leg hinweg = population.getFactory().createLeg("car");
+			plan.addLeg(hinweg);
+		}else {
+			Leg hinweg = population.getFactory().createLeg("walk");
+			plan.addLeg(hinweg);
+		}
 		
 		Activity work = population.getFactory().createActivityFromCoord("work", coordWork);
 		work.setEndTime(randomTime(19*60*60, 3*60*60));
 		plan.addActivity(work);
 		
-		Leg rueckweg = population.getFactory().createLeg("car");
-		plan.addLeg(rueckweg);
+		flag=rand();
+		if (flag) {
+			Leg hinweg = population.getFactory().createLeg("car");
+			plan.addLeg(hinweg);
+		}else {
+			Leg hinweg = population.getFactory().createLeg("walk");
+			plan.addLeg(hinweg);
+		}
 		
 		Activity home2 = population.getFactory().createActivityFromCoord("home", coord);
 		plan.addActivity(home2);
 		
 		person.addPlan(plan);
 		population.addPerson(person);
+	}
+	
+	public static Boolean rand() {
+		
+		   Random r = new Random();
+	       int n5 = r.nextInt(10);
+	       if(n5 < 3){ 
+	           return true;
+	        }else {
+	          return false;
+	        }
+		
 	}
 	
 	private static int randomTime(int normalTime, int variance){

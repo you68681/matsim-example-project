@@ -61,6 +61,12 @@
 			<version>${matsim.version}</version>
 			<scope>test</scope>
 		</dependency>
+				
+		<dependency>
+			<groupId>org.matsim.contrib</groupId>
+			<artifactId>roadpricing</artifactId>
+			<version>${matsim.version}</version>
+		</dependency>
 
 		<!--to get ExamplesUtils. commented out since it is another dependency, but in general this is recommended. -->
 		<!--<dependency>-->
@@ -70,6 +76,7 @@
 		<!--</dependency>-->
 
 	</dependencies>
+	
 
 	<build>
 		<plugins>
